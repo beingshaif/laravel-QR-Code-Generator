@@ -36,7 +36,7 @@ class UserController extends Controller
     }
     public function generate($id)
     {
-        $user = User::select('name','email','phone')->where('id', $id)->first();
+        $user = User::select('name', 'phone', 'email')->where('id', $id)->first();
         $qrcode = QrCode::size(400)->generate($user);
         return view('qrcode', compact('qrcode'));
     }
