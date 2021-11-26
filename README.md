@@ -1,0 +1,1 @@
+# laravel-QR-Code-Generator
